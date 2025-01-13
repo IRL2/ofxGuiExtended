@@ -37,16 +37,16 @@ void ofxGuiPanelHeader::loadIcons(){
 void ofxGuiPanelHeader::generateDraw(){
 	ofxGuiElement::generateDraw();
 
-	float iconHeight = getHeight()*.5;
-	float iconWidth = loadIcon.getWidth()/loadIcon.getHeight()*iconHeight;
-	int iconSpacing = iconWidth*.5;
+		float iconHeight = getHeight()*.5;
+		float iconWidth = loadIcon.getWidth()/loadIcon.getHeight()*iconHeight;
+		int iconSpacing = iconWidth*.5;
 
-	loadBox.x = getWidth() - (iconWidth * 2 + iconSpacing + textPadding);
-	loadBox.y = getHeight() / 2. - iconHeight / 2.;
-	loadBox.width = iconWidth;
-	loadBox.height = iconHeight;
-	saveBox.set(loadBox);
-	saveBox.x += iconWidth + iconSpacing;
+		loadBox.x = getWidth() - (iconWidth * 2 + iconSpacing + textPadding);
+		loadBox.y = getHeight() / 2. - iconHeight / 2.;
+		loadBox.width = iconWidth;
+		loadBox.height = iconHeight;
+		saveBox.set(loadBox);
+		saveBox.x += iconWidth + iconSpacing;
 
 	ofxGuiGroup* _parent = dynamic_cast<ofxGuiGroup*>(parent());
 	if(_parent){
@@ -84,8 +84,8 @@ void ofxGuiPanelHeader::render() {
 
 	bool texHackEnabled = ofIsTextureEdgeHackEnabled();
 	ofDisableTextureEdgeHack();
-	loadIcon.draw(loadBox);
-	saveIcon.draw(saveBox);
+	//loadIcon.draw(loadBox);
+	//saveIcon.draw(saveBox);
 	if(texHackEnabled){
 		ofEnableTextureEdgeHack();
 	}
